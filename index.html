@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>PDF水印工具</title>
     <style>
         * {
@@ -286,6 +286,153 @@
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+
+        /* 移动端响应式布局 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .upload-area {
+                padding: 20px;
+            }
+
+            .upload-area h3 {
+                font-size: 18px;
+            }
+
+            .upload-area p {
+                font-size: 12px;
+            }
+
+            .settings-panel {
+                padding: 15px;
+                order: 2;
+            }
+
+            .settings-panel h3 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            .form-group label {
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+
+            .form-group input[type="text"],
+            .form-group input[type="number"],
+            .form-group select {
+                padding: 10px;
+                font-size: 16px; /* 防止iOS缩放 */
+            }
+
+            .watermark-type-buttons {
+                flex-direction: column;
+            }
+
+            .type-button {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .preview-area {
+                padding: 15px;
+                min-height: auto;
+                order: 1;
+            }
+
+            .preview-area h3 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            .preview-container {
+                grid-template-columns: 1fr;
+                height: auto;
+                gap: 15px;
+            }
+
+            .preview-box {
+                height: 200px;
+            }
+
+            .preview-box h4 {
+                font-size: 12px;
+                padding: 3px 6px;
+            }
+
+            .watermark-preview {
+                transform: scale(0.6);
+                transform-origin: center;
+            }
+
+            .action-buttons {
+                margin-top: 15px;
+            }
+
+            .btn {
+                padding: 12px 20px;
+                font-size: 14px;
+                width: 100%;
+            }
+
+            .range-value {
+                font-size: 12px;
+            }
+
+            .color-input-wrapper input[type="color"] {
+                width: 40px;
+                height: 40px;
+            }
+
+            .font-loading {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .loading p {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        }
+
+        /* 更小屏幕的优化 */
+        @media (max-width: 375px) {
+            .container {
+                padding: 8px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .settings-panel {
+                padding: 12px;
+            }
+
+            .form-group {
+                margin-bottom: 12px;
+            }
+
+            .preview-box {
+                height: 150px;
+            }
         }
     </style>
 </head>
